@@ -6,26 +6,31 @@ export class App {
   public newTaskDescription = '';
 
   private taskIdPrefix = 'TID';
+  private taskIdCtr = 0;
 
   constructor() {
     this.taskList = [
       {
-        'id': 'TID0',
+        'id': this.getId(),
         'description': 'This is Sample Task',
         'status': 0
       },
       {
-        'id': 'TID1',
+        'id': this.getId(),
         'description': 'This is completed Sample Task',
         'status': 1
       }
     ];
   }
 
+  private getId() {
+    return this.taskIdPrefix + this.taskIdCtr ++;
+  }
+
   public addTask() {
     if (this.newTaskDescription) {
       this.taskList.push(new Task(
-        this.taskIdPrefix + this.taskList.length,
+        this.getId(),
         this.newTaskDescription
       ));
       this.newTaskDescription = '';
