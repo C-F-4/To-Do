@@ -6,16 +6,15 @@
     <div class="row">
       <form submit.trigger="addTask()">
         <div class="row">
-          <label for="newTask">Add something here to do:</label>
-          <input type="text" class="u-full-width" id="newTask" value.bind="newTaskDescription">
+          <input type="text" class="u-full-width" id="newTask" value.bind="newTaskDescription" placeholder="Type something here to do">
         </div>
-        <input type="submit" class="button-primary" value="Add">
+        <input type="submit" class="button-primary" value="Add To-Do">
       </form>
     </div>
 
     <ul class="list-view">
       <li class="list-item row" repeat.for="task of taskList">
-        <input class="one column" type="checkbox" checked.bind="task.status">
+        <input class="one column" type="checkbox" checked.bind="task.status" id="${task.id}">
         <span class="item-description eight columns ${task.status ? 'complete' : 'in-progress'}">
           ${task.description}
         </span>

@@ -3,16 +3,19 @@ import { Task } from './task';
 export class App {
   public pageTitle = 'To-Do List';
   public taskList = new Array<Task>();
-
   public newTaskDescription = '';
+
+  private taskIdPrefix = 'TID';
 
   constructor() {
     this.taskList = [
       {
+        'id': 'TID0',
         'description': 'This is Sample Task',
         'status': 0
       },
       {
+        'id': 'TID1',
         'description': 'This is completed Sample Task',
         'status': 1
       }
@@ -21,7 +24,10 @@ export class App {
 
   public addTask() {
     if (this.newTaskDescription) {
-      this.taskList.push(new Task(this.newTaskDescription));
+      this.taskList.push(new Task(
+        this.taskIdPrefix + this.taskList.length,
+        this.newTaskDescription
+      ));
       this.newTaskDescription = '';
     }
   }
