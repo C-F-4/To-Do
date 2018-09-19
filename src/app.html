@@ -14,10 +14,12 @@
 
     <ul class="list-view">
       <li class="list-item row" repeat.for="task of taskList">
-        <input class="one column" type="checkbox" checked.bind="task.status" id="${task.id}">
-        <span class="item-description eight columns ${task.status ? 'complete' : 'in-progress'}">
-          ${task.description}
-        </span>
+        <label class="material-checkbox nine columns">
+          <input class="" type="checkbox" checked.bind="task.status" id="${task.id}">
+          <span class="item-description ${task.status ? 'complete' : 'in-progress'}">
+            ${task.description}
+          </span>
+        </label>
         <button class="button-primary three columns" click.trigger="removeTask(task)">Remove</button>
       </li>
     </ul>
