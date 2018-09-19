@@ -13,12 +13,12 @@ export class App {
       {
         'id': this.getId(),
         'description': 'This is Sample Task',
-        'status': 0
+        'status': false
       },
       {
         'id': this.getId(),
         'description': 'This is completed Sample Task',
-        'status': 1
+        'status': true
       }
     ];
   }

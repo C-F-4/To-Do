@@ -1,5 +1,5 @@
 export class Task {
-  public status = 0;
+  public status = false;
   constructor(
     public id: string,
     public description: string
