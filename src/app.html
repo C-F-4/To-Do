@@ -1,0 +1,26 @@
+<template>
+  <section class="container">
+    <header class="row">
+      <h1>${pageTitle}</h1>
+    </header>
+    <div class="row">
+      <form submit.trigger="addTask()">
+        <div class="row">
+          <label for="newTask">Add something here to do:</label>
+          <input type="text" class="u-full-width" id="newTask" value.bind="newTaskDescription">
+        </div>
+        <input type="submit" class="button-primary" value="Add">
+      </form>
+    </div>
+  </section>
+
+  <ul class="list-view">
+    <li class="list-item" repeat.for="task of taskList">
+      <input type="checkbox" checked.bind="task.status">
+      <span class="item-description ${task.status ? 'complete' : 'in-progress'}">
+        ${task.description}
+      </span>
+      <button click.trigger="removeTask(task)" class="button-primary">Remove</button>
+    </li>
+  </ul>
+</template>
