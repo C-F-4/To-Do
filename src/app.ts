@@ -6,6 +6,19 @@ export class App {
 
   public newTaskDescription = '';
 
+  constructor() {
+    this.taskList = [
+      {
+        'description': 'This is Sample Task',
+        'status': 0
+      },
+      {
+        'description': 'This is completed Sample Task',
+        'status': 1
+      }
+    ];
+  }
+
   public addTask() {
     if (this.newTaskDescription) {
       this.taskList.push(new Task(this.newTaskDescription));

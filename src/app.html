@@ -12,15 +12,15 @@
         <input type="submit" class="button-primary" value="Add">
       </form>
     </div>
-  </section>
 
-  <ul class="list-view">
-    <li class="list-item" repeat.for="task of taskList">
-      <input type="checkbox" checked.bind="task.status">
-      <span class="item-description ${task.status ? 'complete' : 'in-progress'}">
-        ${task.description}
-      </span>
-      <button click.trigger="removeTask(task)" class="button-primary">Remove</button>
-    </li>
-  </ul>
+    <ul class="list-view">
+      <li class="list-item row" repeat.for="task of taskList">
+        <input class="one column" type="checkbox" checked.bind="task.status">
+        <span class="item-description eight columns ${task.status ? 'complete' : 'in-progress'}">
+          ${task.description}
+        </span>
+        <button class="button-primary three columns" click.trigger="removeTask(task)">Remove</button>
+      </li>
+    </ul>
+  </section>
 </template>
