@@ -1,3 +1,8 @@
+body {
+  padding: 10px 0;
+  box-sizing: border-box;
+}
+
 .complete {
   color: green;
   text-decoration: line-through;
@@ -152,12 +157,15 @@
   -webkit-animation-direction: alternate;
           animation-direction: alternate;
 }
+
 .emoji1:after {
   left: 30px;
 }
+
 .emoji1:before {
   left: 85px;
 }
+
 .emoji1 .mouth {
   position: absolute;
   height: 3px;
@@ -274,4 +282,8 @@
   padding: 10px;
   box-sizing: border-box;
   margin-top: 10px;
+}
+
+.page-title {
+  margin-bottom: 0.15rem;
 }

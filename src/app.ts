@@ -2,6 +2,7 @@ import { Task } from './task';
 
 export class App {
   public pageTitle = 'To-Do List';
+  public subTitle = '{ Simple Note Taking Application }';
   public taskList = new Array<Task>();
   public newTaskDescription = '';
 

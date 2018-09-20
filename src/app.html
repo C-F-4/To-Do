@@ -1,7 +1,8 @@
 <template>
   <section class="container">
     <header class="row">
-      <h1>${pageTitle}</h1>
+      <h1 class="page-title">${pageTitle}</h1>
+      <h6 if.bind="subTitle">${subTitle}</h6>
     </header>
     <div class="row">
       <form submit.trigger="addTask()">
