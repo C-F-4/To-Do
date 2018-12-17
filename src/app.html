@@ -15,13 +15,15 @@
 
     <ul class="list-view" if.bind="taskList.length">
       <li class="list-item row" repeat.for="task of taskList">
-        <label class="material-checkbox nine columns">
+        <label class="material-checkbox ten columns">
           <input class="" type="checkbox" checked.bind="task.status" id="${task.id}">
           <span class="item-description ${task.status ? 'complete' : 'in-progress'}">
             ${task.description}
           </span>
         </label>
-        <button class="button-primary three columns" click.trigger="removeTask(task)">Remove</button>
+        <div class="two columns button-remove-wrapper">
+          <button class="button-primary button-remove" click.trigger="removeTask(task)"></button>
+        </div>
       </li>
     </ul>
 

@@ -287,3 +287,17 @@ body {
 .page-title {
   margin-bottom: 0.15rem;
 }
+
+.button-remove-wrapper {
+  text-align: right;
+}
+
+/**
+ * Buttons
+ */
+.button-remove {
+  width: 38px!important;
+  height: 38px;
+  background: url('./../images/icons/trash.svg') no-repeat center center;
+  background-size: 25px;
+}
